@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select & Send NFT</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+    <script src="check_and_send.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        .nft-card { border: 1px solid #ccc; border-radius: 8px; padding: 10px; margin: 10px; display: inline-block; width: 250px; }
+        .nft-card img { max-width: 100%; border-radius: 5px; }
+        .nft-card input { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>License NFTs in Wallet</h1>
+
+    <button onclick="connectWallet()">🔗 Connect Wallet</button>
+    <p id="wallet-address">Wallet: Not Connected</p>
+
+    <div id="nft-list">Please connect wallet to load NFTs...</div>
+
+    <h2>Send Selected NFT</h2>
+    <input type="text" id="recipient" placeholder="Enter recipient wallet" style="width:300px;" />
+    <br><br>
+    <button onclick="sendSelectedNFT()">📤 Send Selected NFT</button>
+</body>
+</html>
